@@ -103,11 +103,23 @@ class MovieClip extends format.display.MovieClip {
 			var symbolItem = xfl.document.symbols.get (instance.libraryItemName);
 			movieClip = new MovieClip (xfl, symbolItem.timeline);
 			
+			if (instance.name != null && instance.name != "") {
+				
+				movieClip.name = instance.name;
+				
+			}
+			
 		}
 
 		if (movieClip != null) {
 			
 			movieClip.transform.matrix = instance.matrix;
+			
+			if (instance.color != null) {
+				
+				movieClip.transform.colorTransform = instance.color;
+				
+			}
 			
 		}
 		

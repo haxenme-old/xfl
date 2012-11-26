@@ -43,7 +43,7 @@ class DOMBitmapItem {
 		bitmapItem.bitmapDataHRef = xml.att.bitmapDataHRef;
 		bitmapItem.frameRight = Std.parseInt (xml.att.frameRight);
 		bitmapItem.frameBottom = Std.parseInt (xml.att.frameBottom);
-		bitmapItem.isJPEG = (xml.att.isJPEG == "true");
+		if (xml.has.isJPEG) bitmapItem.isJPEG = (xml.att.isJPEG == "true");
 		
 		return bitmapItem;
 		

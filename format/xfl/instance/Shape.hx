@@ -82,7 +82,7 @@ class Shape extends nme.display.Shape {
 						
 						if (Std.is (fillStyle.data, SolidColor)) {
 							
-							graphics.beginFill (cast (fillStyle.data, SolidColor).color);
+							graphics.beginFill (fillStyle.data.color, fillStyle.data.alpha);
 							
 						} else if (Std.is (fillStyle.data, LinearGradient)) {
 							

@@ -1,6 +1,7 @@
 package format.xfl.dom;
 
 
+import format.xfl.geom.Color;
 import format.xfl.geom.Matrix;
 import format.xfl.geom.Point;
 import haxe.xml.Fast;
@@ -11,9 +12,11 @@ class DOMSymbolInstance {
 	
 	public var centerPoint3DX:Float;
 	public var centerPoint3DY:Float;
+	public var color:Color;
 	public var libraryItemName:String;
 	public var loop:String;
 	public var matrix:Matrix;
+	public var name:String;
 	public var selected:Bool;
 	public var symbolType:String;
 	public var transformationPoint:Point;
@@ -37,6 +40,12 @@ class DOMSymbolInstance {
 			
 			symbolInstance.centerPoint3DX = Std.parseFloat (xml.att.centerPoint3DX);
 			symbolInstance.centerPoint3DY = Std.parseFloat (xml.att.centerPoint3DY);
+			
+		}
+		
+		if (xml.has.name) {
+			
+			symbolInstance.name = xml.att.name;
 			
 		}
 		
@@ -70,9 +79,17 @@ class DOMSymbolInstance {
 					
 					symbolInstance.matrix = Matrix.parse (element.elements.next ());
 				
+				case "color":
+					
+					symbolInstance.color = Color.parse (element.elements.next ());
+				
 			}
 			
 		}
+		
+		//<color>
+                    //<Color alphaMultiplier="0.80078125"/>
+                  //</color>
 		
 		return symbolInstance;
 		
