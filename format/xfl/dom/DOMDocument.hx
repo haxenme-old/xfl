@@ -70,8 +70,8 @@ class DOMDocument {
 		
 		var document = new DOMDocument ();
 		
-		document.width = Std.parseInt (xml.att.width);
-		document.height = Std.parseInt (xml.att.height);
+		if (xml.has.width) document.width = Std.parseInt (xml.att.width);
+		if (xml.has.height) document.height = Std.parseInt (xml.att.height);
 		document.currentTimeline = Std.parseInt (xml.att.currentTimeline);
 		document.xflVersion = Std.parseFloat (xml.att.xflVersion);
 		document.creatorInfo = xml.att.creatorInfo;
@@ -79,7 +79,7 @@ class DOMDocument {
 		document.versionInfo = xml.att.versionInfo;
 		document.majorVersion = Std.parseInt (xml.att.majorVersion);
 		document.buildNumber = Std.parseInt (xml.att.buildNumber);
-		document.viewAngle3D = Std.parseFloat (xml.att.viewAngle3D);
+		if (xml.has.viewAngle3D) document.viewAngle3D = Std.parseFloat (xml.att.viewAngle3D);
 		document.nextSceneIdentifier = xml.att.nextSceneIdentifier;
 		document.playOptionsPlayLoop = (xml.att.playOptionsPlayLoop == "true");
 		document.playOptionsPlayPages = (xml.att.playOptionsPlayPages == "true");
