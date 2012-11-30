@@ -85,7 +85,12 @@ class MovieClip extends format.display.MovieClip {
 		if (bitmapData != null) {
 			
 			bitmap = new Bitmap (bitmapData);
-			bitmap.transform.matrix = instance.matrix;
+			
+			if (instance.matrix != null) {
+				
+				bitmap.transform.matrix = instance.matrix;
+				
+			}
 			
 		}
 		
@@ -113,7 +118,11 @@ class MovieClip extends format.display.MovieClip {
 
 		if (movieClip != null) {
 			
-			movieClip.transform.matrix = instance.matrix;
+			if (instance.matrix != null) {
+				
+				movieClip.transform.matrix = instance.matrix;
+				
+			}
 			
 			if (instance.color != null) {
 				

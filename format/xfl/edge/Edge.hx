@@ -16,7 +16,9 @@ class Edge {
 
 	public function new () {
 		
-		
+		fillStyle0 = -1;
+		fillStyle1 = -1;
+		strokeStyle = -1;
 		
 	}
 	
