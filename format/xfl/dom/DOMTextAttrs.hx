@@ -1,0 +1,43 @@
+package format.xfl.dom;
+
+
+import haxe.xml.Fast;
+
+
+class DOMTextAttrs {
+	
+	
+	public var aliasText:Bool;
+	public var alignment:String;
+	public var alpha:Float;
+	//public var bitmapSize:Int;
+	public var face:String;
+	public var fillColor:Int;
+	public var size:Float;
+	
+	
+	public function new () {
+		
+		
+		
+	}
+	
+	
+	public static function parse (xml:Fast):DOMTextAttrs {
+		
+		var textAttrs = new DOMTextAttrs ();
+		
+		if (xml.has.alignment) textAttrs.alignment = xml.att.alignment;
+		if (xml.has.aliasText) textAttrs.aliasText = (xml.att.aliasText == "true");
+		if (xml.has.alpha) textAttrs.alpha = Std.parseFloat (xml.att.alpha);
+		if (xml.has.size) textAttrs.size = Std.parseFloat (xml.att.size);
+		//textAttrs.bitmapSize = Std.parseInt (xml.att.bitmapSize);
+		if (xml.has.face) textAttrs.face = xml.att.face;
+		if (xml.has.fillColor) textAttrs.fillColor = Std.parseInt ("0x" + xml.att.fillColor.substr (1));
+		
+		return textAttrs;
+		
+	}
+	
+	
+}

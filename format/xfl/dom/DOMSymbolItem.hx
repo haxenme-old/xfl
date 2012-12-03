@@ -13,7 +13,7 @@ class DOMSymbolItem {
 	
 	
 	public var itemID:String;
-	public var lastModified:Int;
+	//public var lastModified:Int;
 	public var linkageClassName:String;
 	public var linkageExportForAS:Bool;
 	public var name:String;
@@ -51,7 +51,7 @@ class DOMSymbolItem {
 		symbolItem.itemID = xml.att.itemID;
 		if (xml.has.linkageExportForAS3) symbolItem.linkageExportForAS = (xml.att.linkageExportForAS == "true");
 		if (xml.has.linkageClassName) symbolItem.linkageClassName = xml.att.linkageClassName;
-		symbolItem.lastModified = Std.parseInt (xml.att.lastModified);
+		//symbolItem.lastModified = Std.parseInt (xml.att.lastModified);
 		
 		for (element in xml.elements) {
 			

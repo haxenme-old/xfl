@@ -4,7 +4,7 @@ package format;
 import format.xfl.dom.DOMBitmapItem;
 import format.xfl.dom.DOMDocument;
 import format.xfl.dom.DOMSymbolItem;
-import format.xfl.instance.MovieClip;
+import format.xfl.symbol.MovieClip;
 import haxe.io.Path;
 import nme.display.BitmapData;
 import nme.geom.Matrix;

@@ -52,7 +52,13 @@ class DOMShape {
 					
 					for (childElement in element.elements) {
 						
-						shape.edges.push (Edge.parse (childElement));
+						var edge = Edge.parse (childElement);
+						
+						if (edge.edges != null && edge.edges != "") {
+							
+							shape.edges.push (edge);
+							
+						}
 						
 					}
 				

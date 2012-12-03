@@ -8,8 +8,8 @@ class DOMBitmapItem {
 	
 	
 	public var bitmapDataHRef:String;
-	public var frameBottom:Int;
-	public var frameRight:Int;
+	//public var frameBottom:Int;
+	//public var frameRight:Int;
 	public var href:String;
 	public var isJPEG:Bool;
 	public var itemID:String;
@@ -41,8 +41,8 @@ class DOMBitmapItem {
 		bitmapItem.quality = Std.parseInt (xml.att.quality);
 		bitmapItem.href = xml.att.href;
 		bitmapItem.bitmapDataHRef = xml.att.bitmapDataHRef;
-		bitmapItem.frameRight = Std.parseInt (xml.att.frameRight);
-		bitmapItem.frameBottom = Std.parseInt (xml.att.frameBottom);
+		//bitmapItem.frameRight = Std.parseInt (xml.att.frameRight);
+		//bitmapItem.frameBottom = Std.parseInt (xml.att.frameBottom);
 		if (xml.has.isJPEG) bitmapItem.isJPEG = (xml.att.isJPEG == "true");
 		
 		return bitmapItem;
