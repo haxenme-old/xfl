@@ -3,5 +3,5 @@
     <tag v="cpp"/>
     <tag v="flash"/>
     <description>Provides support for parsing and rendering XFL content</description>
-    <version name="1.01">Improvements for alpha, color transform and instances names</version>
+    <version name="1.02">Added support for MovieClip animation, initial support for text, improvements for HTML5</version>
 </project>

@@ -215,7 +215,8 @@ class Shape extends nme.display.Shape {
 			
 			if (first.fillStyle >= fillStyles.length) {
 				
-				throw ("Invalid fill style");
+				//throw ("Invalid fill style");
+				continue;
 				
 			}
 			
@@ -352,6 +353,7 @@ class Shape extends nme.display.Shape {
 				
 			} else if (Std.is (fillStyle.data, RadialGradient)) {
 				
+				#if !html5
 				var data:RadialGradient = cast fillStyle.data;
 				
 				var colors = [];
@@ -371,6 +373,7 @@ class Shape extends nme.display.Shape {
 					g.beginGradientFill (GradientType.RADIAL, colors, alphas, ratios, data.matrix);
 					
 				});
+				#end
 				
 			}
 			
