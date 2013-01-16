@@ -1,7 +1,11 @@
 package format.xfl.dom;
 
 
+#if haxe_211
+import haxe.crypto.BaseCode;
+#else
 import haxe.BaseCode;
+#end
 import haxe.xml.Fast;
 
 
