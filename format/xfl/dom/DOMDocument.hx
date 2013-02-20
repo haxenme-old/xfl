@@ -11,6 +11,12 @@ import nme.Assets;
 import sys.io.File;
 #end
 
+#if haxe3
+import haxe.ds.StringMap;
+#else
+typedef StringMap<T> = Hash<T>;
+#end
+
 
 class DOMDocument {
 	
@@ -21,7 +27,7 @@ class DOMDocument {
 	//public var folders:Array <DOMFolderItem>;
 	public var height:Int;
 	//public var majorVersion:Int;
-	public var media:Hash <Dynamic>;
+	public var media:StringMap <Dynamic>;
 	//public var nextSceneIdentifier:String;
 	//public var platform:String;
 	//public var playOptionsPlayFrameActions:Bool;
@@ -29,7 +35,7 @@ class DOMDocument {
 	//public var playOptionsPlayPages:Bool;
 	//public var printerSettings:PrinterSettings;
 	//public var publishHistory:Array <PublishItem>;
-	public var symbols:Hash <DOMSymbolItem>;
+	public var symbols:StringMap <DOMSymbolItem>;
 	public var timelines:Array <DOMTimeline>;
 	//public var versionInfo:String;
 	//public var viewAngle3D:Float;
@@ -40,8 +46,8 @@ class DOMDocument {
 	public function new () {
 		
 		//folders = new Array <DOMFolderItem> ();
-		media = new Hash <Dynamic> ();
-		symbols = new Hash <DOMSymbolItem> ();
+		media = new StringMap <Dynamic> ();
+		symbols = new StringMap <DOMSymbolItem> ();
 		timelines = new Array <DOMTimeline> ();
 		//publishHistory = new Array <PublishItem> ();
 		
