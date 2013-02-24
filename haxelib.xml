@@ -3,5 +3,5 @@
     <tag v="cpp"/>
     <tag v="flash"/>
     <description>Provides support for parsing and rendering XFL content</description>
-    <version name="1.03">Haxe 3 compile fix</version>
+    <version name="1.04">Update for Neko 2</version>
 </project>
