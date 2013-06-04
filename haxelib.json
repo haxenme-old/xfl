@@ -1,0 +1,10 @@
+{
+    "name":         "xfl",
+    "url":          "http://github.com/haxenme/swf",
+    "license":      "MIT",
+    "tags":         ["cpp","flash"],
+    "description":  "Provides support for parsing and rendering XFL content",
+    "version":      "1.0.5",
+    "releasenote":  "Made XFL parsing independant of NME. Update for new haxelib",
+    "contributors": ["elyon"]
+}

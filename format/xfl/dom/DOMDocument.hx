@@ -5,7 +5,10 @@ import format.xfl.misc.PrinterSettings;
 import format.xfl.misc.PublishItem;
 import haxe.io.Path;
 import haxe.xml.Fast;
+
+#if nme
 import nme.Assets;
+#end
 
 #if neko
 import sys.io.File;

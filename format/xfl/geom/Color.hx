@@ -2,13 +2,16 @@ package format.xfl.geom;
 
 
 import haxe.xml.Fast;
-import nme.geom.ColorTransform;
 
+#if nme
+import nme.geom.ColorTransform;
+#end
 
 class Color extends ColorTransform {
 	
 	
 	public function new (redMultiplier:Float = 1, greenMultiplier:Float = 1, blueMultiplier:Float = 1, alphaMultiplier:Float = 1, redOffset:Float = 0, greenOffset:Float = 0, blueOffset:Float = 0, alphaOffset:Float = 0) {
+		
 		
 		super (redMultiplier, greenMultiplier, blueMultiplier, alphaMultiplier, redOffset, greenOffset, blueOffset, alphaOffset);
 		
