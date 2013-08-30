@@ -3,14 +3,31 @@ package format.xfl.geom;
 
 import haxe.xml.Fast;
 
-
+#if nme 
 class Matrix extends flash.geom.Matrix {
-	
+#else
+class Matrix {
+
+	public var a:Float;
+	public var b:Float;
+	public var c:Float;
+	public var d:Float;
+	public var tx:Float;
+	public var ty:Float;
+#end
 	
 	public function new (a:Float = 1, b:Float = 0, c:Float = 0, d:Float = 1, tx:Float = 0, ty:Float = 0) {
 		
+		#if nme 
 		super (a, b, c, d, tx, ty);
-		
+		#else
+		this.a = a;
+		this.b = b;
+		this.c = c;
+		this.d = d;
+		this.tx = tx;
+		this.ty = ty;
+		#end
 	}
 	
 	

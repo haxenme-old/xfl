@@ -4,11 +4,14 @@ package format;
 import format.xfl.dom.DOMBitmapItem;
 import format.xfl.dom.DOMDocument;
 import format.xfl.dom.DOMSymbolItem;
+#if nme
 import format.xfl.symbol.MovieClip;
-import haxe.io.Path;
 import nme.display.BitmapData;
 import nme.geom.Matrix;
 import nme.Assets;
+#end
+import haxe.io.Path;
+
 
 
 class XFL {
@@ -26,7 +29,7 @@ class XFL {
 		
 	}
 	
-	
+	#if nme
 	public function getBitmapData (name:String):BitmapData {
 		
 		for (medium in document.media) {
@@ -86,6 +89,7 @@ class XFL {
 		return null;
 		
 	}
+	#end
 	
 	
 }

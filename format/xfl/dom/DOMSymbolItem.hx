@@ -2,7 +2,10 @@ package format.xfl.dom;
 
 
 import haxe.xml.Fast;
+
+#if nme
 import nme.Assets;
+#end
 
 #if neko
 import sys.io.File;
